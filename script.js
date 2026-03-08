@@ -4,14 +4,14 @@ const toggleLetterBtn = document.querySelector('#toggleLetter');
 const secretLetter = document.querySelector('#secretLetter');
 const revealElements = document.querySelectorAll('.reveal');
 
-// Scroll suave desde el hero hacia la primera sección del recorrido.
+// Scroll al iniciar el recorrido
 if (startJourneyBtn && firstSection) {
   startJourneyBtn.addEventListener('click', () => {
     firstSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 }
 
-// Interacción para abrir/cerrar la carta final.
+// Carta final
 if (toggleLetterBtn && secretLetter) {
   toggleLetterBtn.addEventListener('click', () => {
     const isExpanded = toggleLetterBtn.getAttribute('aria-expanded') === 'true';
@@ -25,27 +25,20 @@ if (toggleLetterBtn && secretLetter) {
   });
 }
 
-// Animaciones de aparición al hacer scroll.
+// Reveal más fluido
 const observer = new IntersectionObserver(
-  (entries) => {
+  (entries, obs) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
       }
     });
   },
   {
-    threshold: 0.2,
-  },
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px',
+  }
 );
 
 revealElements.forEach((element) => observer.observe(element));
-
-// TODO: Estructura base para agregar música más adelante sin autoplay.
-// const music = document.querySelector('#bgMusic');
-// const playMusicBtn = document.querySelector('#playMusic');
-// if (music && playMusicBtn) {
-//   playMusicBtn.addEventListener('click', () => {
-//     music.paused ? music.play() : music.pause();
-//   });
-// }

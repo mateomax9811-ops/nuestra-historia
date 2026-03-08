@@ -56,7 +56,7 @@ p {
 }
 
 .section {
-  padding: 5.5rem 0;
+  padding: 4rem 0;
   position: relative;
 }
 
@@ -81,12 +81,12 @@ p {
 }
 
 .sparkle {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 0 16px rgba(255, 255, 255, 0.9);
-  animation: float 8s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  animation: float 12s ease-in-out infinite;
 }
 
 .sparkle-1 {
@@ -147,9 +147,9 @@ p {
 }
 
 .heart {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #f58bb6;
-  animation: pulse 3s ease-in-out infinite;
+  animation: pulse 5s ease-in-out infinite;
 }
 
 .heart-1 {
@@ -177,9 +177,8 @@ p {
   text-align: center;
   padding: 2rem;
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 246, 251, 0.78));
-  backdrop-filter: blur(5px);
-  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 246, 251, 0.9));
+  box-shadow: 0 10px 24px rgba(235, 118, 171, 0.12);
 }
 
 .eyebrow {
@@ -232,12 +231,11 @@ p {
 
 /* Cards and content */
 .card {
-  background: var(--card);
+  background: rgba(255, 255, 255, 0.94);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 24px rgba(235, 118, 171, 0.1);
   padding: 1.25rem;
-  backdrop-filter: blur(4px);
 }
 
 .letter-card {
@@ -256,8 +254,8 @@ p {
 }
 
 .moment-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 32px rgba(235, 118, 171, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(235, 118, 171, 0.14);
 }
 
 .moment-card__media {
@@ -357,8 +355,9 @@ p {
 /* Reveal on scroll */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  will-change: opacity, transform;
 }
 
 .reveal.is-visible {
@@ -399,6 +398,12 @@ p {
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+  .page-decor {
+    display: none;
+  }
+}
+
 @media (min-width: 700px) {
   .moments-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -415,11 +420,11 @@ p {
 
 @media (min-width: 980px) {
   .hero__content {
-    padding: 2.8rem;
+    padding: 2.5rem;
   }
 
   .section {
-    padding: 6.5rem 0;
+    padding: 5rem 0;
   }
 }
 
