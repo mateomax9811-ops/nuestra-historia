@@ -51,12 +51,12 @@ p {
 }
 
 .container {
-  width: min(1080px, 92%);
+  width: min(980px, 92%);
   margin-inline: auto;
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 3.2rem 0;
   position: relative;
 }
 
@@ -255,7 +255,7 @@ p {
 }
 
 .moment-card__media {
-  height: 120px;
+  height: 96px;
   border-radius: var(--radius-sm);
   margin-bottom: 0.8rem;
   background:
@@ -356,6 +356,42 @@ p {
 }
 
 
+
+.scene[hidden] {
+  display: none;
+}
+
+.scene-nav {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn--soft {
+  background: linear-gradient(135deg, rgba(245, 158, 193, 0.2), rgba(248, 183, 211, 0.28));
+  border: 1px solid rgba(245, 158, 193, 0.45);
+  color: var(--text);
+  box-shadow: 0 8px 18px rgba(235, 118, 171, 0.12);
+}
+
+.btn--soft:hover,
+.btn--soft:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(235, 118, 171, 0.16);
+}
+
+.media-ready .moment-card__media {
+  opacity: 0.72;
+}
+
+.audio-ready {
+  position: relative;
+}
+
+.section--final {
+  padding-top: 3.8rem;
+}
+
 .footer {
   padding: 2rem 0 3rem;
   text-align: center;
@@ -416,7 +452,7 @@ p {
 
 @media (min-width: 700px) {
   .moment-card__media {
-    height: 135px;
+    height: 115px;
   }
 
   .moments-grid {
@@ -434,7 +470,7 @@ p {
   }
 
   .section {
-    padding: 5rem 0;
+    padding: 4rem 0;
   }
 }
 

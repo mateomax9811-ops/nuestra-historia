@@ -35,7 +35,7 @@
     </header>
 
     <main>
-      <section class="section reveal" id="como-empezo">
+      <section class="section reveal scene" id="como-empezo" hidden>
         <div class="container">
           <h2>Cómo empezó todo</h2>
           <article class="card letter-card">
@@ -61,15 +61,44 @@
               existen una sola vez en medio de este vasto universo.
             </p>
           </article>
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="pausa-reencuentro">Quiero ver más</button>
+          </div>
         </div>
       </section>
 
-      <section class="section reveal" id="momentos">
+      <section class="section section--intimate reveal scene" id="pausa-reencuentro" hidden>
+        <div class="container">
+          <h2>Pausa y reencuentro</h2>
+          <div class="card intimate-card">
+            <p>
+              No todo en nuestra historia ha sido lineal, y creo que eso también la hace más real.
+              Hubo un momento en el que dejamos de hablar, y aunque fue una pausa que se sintió,
+              nunca borró lo especial que ya habías dejado en mí.
+            </p>
+            <p>
+              Y cuando este año volvimos a pasar tiempo juntos, sentí que algo entre nosotros había
+              cambiado. Como si todo hubiera regresado con más fuerza, con más cariño y con una
+              conexión todavía más bonita. Volver a ti de esta manera ha sido una de esas cosas que
+              simplemente se sienten bien en el corazón.
+            </p>
+            <p>
+              Ahora, cuando hablo contigo, cuando me río contigo y cuando compartimos nuestras noches,
+              siento que lo nuestro volvió distinto: más bonito, más sincero y más fuerte.
+            </p>
+          </div>
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="momentos">Continuar</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal scene" id="momentos" hidden>
         <div class="container">
           <h2>Nuestros momentos</h2>
           <p class="section__intro">Cuatro pedacitos de todo lo bonito que se siente vivir contigo esta historia.</p>
 
-          <div class="moments-grid">
+          <div class="moments-grid media-ready">
             <article class="card moment-card">
               <div class="moment-card__media" role="img" aria-label="Ilustración suave del momento cuando jugamos juntos"></div>
               <h3>Cuando jugamos juntos</h3>
@@ -114,10 +143,13 @@
               </p>
             </article>
           </div>
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="especial">Seguir leyendo</button>
+          </div>
         </div>
       </section>
 
-      <section class="section section--soft reveal" id="especial">
+      <section class="section section--soft reveal scene" id="especial" hidden>
         <div class="container">
           <h2>Lo especial de ti</h2>
           <article class="card special-story">
@@ -139,11 +171,13 @@
               y eso hace que mientras más te conozco, más me gustes.
             </p>
           </article>
-
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="momentos-compartidos">Una cosa más</button>
+          </div>
         </div>
       </section>
 
-      <section class="section reveal" id="momentos-compartidos">
+      <section class="section reveal scene" id="momentos-compartidos" hidden>
         <div class="container">
           <h2>Momentos que también son nuestros</h2>
           <p class="section__intro">
@@ -152,7 +186,7 @@
             historia de recuerdos que para mí ya tienen un lugar muy especial.
           </p>
 
-          <div class="moments-grid moments-grid--shared">
+          <div class="moments-grid moments-grid--shared media-ready">
             <article class="card moment-card shared-card">
               <div class="moment-card__media" role="img" aria-label="Espacio reservado para momento de Minecraft"></div>
               <h3>Minecraft</h3>
@@ -184,10 +218,13 @@
               </p>
             </article>
           </div>
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="distancia">Seguir</button>
+          </div>
         </div>
       </section>
 
-      <section class="section section--intimate reveal" id="distancia">
+      <section class="section section--intimate reveal scene" id="distancia" hidden>
         <div class="container">
           <h2>La distancia</h2>
           <div class="card intimate-card">
@@ -207,10 +244,13 @@
               existe, sí, pero no ha sido capaz de impedir que esto se sienta especial.
             </p>
           </div>
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="comienzo">Continuar</button>
+          </div>
         </div>
       </section>
 
-      <section class="section reveal" id="comienzo">
+      <section class="section reveal scene" id="comienzo" hidden>
         <div class="container">
           <h2>Lo nuestro apenas comienza</h2>
           <article class="card beginning-card">
@@ -228,14 +268,17 @@
               algo todavía más grande, más profundo y más nuestro.
             </p>
           </article>
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="carta-final">Quiero leer tu carta</button>
+          </div>
         </div>
       </section>
 
-      <section class="section reveal" id="carta-final">
+      <section class="section reveal scene section--final" id="carta-final" hidden>
         <div class="container">
           <h2>Para mi toxiquita</h2>
 
-          <div class="letter-wrap">
+          <div class="letter-wrap audio-ready">
             <article class="card secret-letter">
               <p>
                 Quería que al final de esta página te quedara algo muy claro: eres una persona
