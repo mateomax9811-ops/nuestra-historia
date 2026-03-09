@@ -280,6 +280,52 @@ p {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 236, 246, 0.5));
 }
 
+
+.special-story {
+  max-width: 860px;
+}
+
+.special-story p + p {
+  margin-top: 1rem;
+}
+
+.special-highlights {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+}
+
+.highlight-card {
+  padding: 1rem 1.1rem;
+  background: rgba(255, 255, 255, 0.97);
+}
+
+.highlight-card h3 {
+  font-size: 1.03rem;
+  margin-bottom: 0.35rem;
+}
+
+.highlight-card p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.moments-grid--shared {
+  margin-top: 1.35rem;
+}
+
+.shared-card .moment-card__media {
+  background:
+    linear-gradient(145deg, rgba(255, 205, 227, 0.48), rgba(255, 245, 251, 0.92)),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.55),
+      rgba(255, 255, 255, 0.55) 10px,
+      rgba(248, 208, 228, 0.45) 10px,
+      rgba(248, 208, 228, 0.45) 20px
+    );
+}
 .quote-card ul {
   margin: 0;
   padding-left: 1.1rem;
@@ -414,10 +460,13 @@ p {
     height: 135px;
   }
 
-  .moments-grid {
+  .special-highlights {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .moments-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
   .two-column {
     grid-template-columns: 1fr 1fr;
