@@ -19,6 +19,10 @@
       <span class="cloud cloud-2"></span>
       <span class="heart heart-1">❤</span>
       <span class="heart heart-2">❤</span>
+      <span class="bow bow-1">🎀</span>
+      <span class="bow bow-2">🎀</span>
+      <span class="petal petal-1"></span>
+      <span class="petal petal-2"></span>
     </div>
 
     <header class="hero" id="inicio">
@@ -39,29 +43,32 @@
         <div class="container">
           <h2>Cómo empezó todo</h2>
           <div class="scene-hooks" data-scene-hooks aria-hidden="true"></div>
-          <article class="card letter-card">
-            <p>
-              Todo empezó en esa partida en Inferno, en el site de A, aunque en ese momento ninguno
-              de los dos sabía todo lo que iba a pasar después. Lo que más recuerdo es haberte dicho
-              “planta, planta, planta”, porque tú tenías la bomba, y escucharte responder
-              repitiéndolo con ese tono juguetón que, aaaa, me encanta. Desde ese día se me quedó
-              grabado. Fue algo simple, pero contigo hasta lo más simple se siente diferente y
-              especial.
-            </p>
-            <p>
-              Después de esa partida te invité a jugar más, y tú aceptaste. Entre partidas y
-              mensajes, te fui conociendo un poco más. Y desde entonces sentí que jugar contigo no se
-              sentía como jugar con cualquier otra persona. Contigo nunca ha importado ganar; lo que
-              realmente importa es pasar tiempo juntos, reírnos, trollear, hacer nuestros rusheos y
-              disfrutar de esa forma tan nuestra de estar juntos. Para mí, eso ya es ganar.
-            </p>
-            <p>
-              Desde el principio me dio curiosidad tu forma de ser, y esa curiosidad sigue viva hasta
-              el día de hoy. Cada vez que conozco algo nuevo de ti, me encantas todavía más. Hay algo
-              en ti que te hace auténtica, única, como si fueras una de esas cosas irrepetibles que
-              existen una sola vez en medio de este vasto universo.
-            </p>
-          </article>
+          <div class="scene-layout scene-layout--float">
+            <article class="card letter-card">
+              <p>
+                Todo empezó en esa partida en Inferno, en el site de A, aunque en ese momento ninguno
+                de los dos sabía todo lo que iba a pasar después. Lo que más recuerdo es haberte dicho
+                “planta, planta, planta”, porque tú tenías la bomba, y escucharte responder
+                repitiéndolo con ese tono juguetón que, aaaa, me encanta. Desde ese día se me quedó
+                grabado. Fue algo simple, pero contigo hasta lo más simple se siente diferente y
+                especial.
+              </p>
+              <p>
+                Después de esa partida te invité a jugar más, y tú aceptaste. Entre partidas y
+                mensajes, te fui conociendo un poco más. Y desde entonces sentí que jugar contigo no se
+                sentía como jugar con cualquier otra persona. Contigo nunca ha importado ganar; lo que
+                realmente importa es pasar tiempo juntos, reírnos, trollear, hacer nuestros rusheos y
+                disfrutar de esa forma tan nuestra de estar juntos. Para mí, eso ya es ganar.
+              </p>
+              <p>
+                Desde el principio me dio curiosidad tu forma de ser, y esa curiosidad sigue viva hasta
+                el día de hoy. Cada vez que conozco algo nuevo de ti, me encantas todavía más. Hay algo
+                en ti que te hace auténtica, única, como si fueras una de esas cosas irrepetibles que
+                existen una sola vez en medio de este vasto universo.
+              </p>
+            </article>
+            <aside class="float-slot float-slot--inferno" aria-hidden="true"></aside>
+          </div>
           <div class="scene-nav">
             <button class="btn btn--soft scene-next" type="button" data-next="pausa-reencuentro">Quiero ver más</button>
           </div>
@@ -98,7 +105,7 @@
         <div class="container">
           <h2>Nuestros momentos</h2>
           <div class="scene-hooks" data-scene-hooks aria-hidden="true"></div>
-          <p class="section__intro">
+          <p class="section__intro section__intro--card">
             A veces pienso en todo lo que ya hemos compartido, y me gusta darme cuenta de que no son
             pocas cosas. Entre juegos, risas, llamadas, series y momentos simples, hemos ido llenando
             nuestra historia de recuerdos que para mí ya tienen un lugar muy especial.
@@ -165,8 +172,8 @@
                   </p>
                 </article>
 
-                <article class="card moment-card moment-slide shared-card">
-                  <div class="moment-card__media" role="img" aria-label="Espacio reservado para recuerdo de Minecraft"></div>
+                <article class="card moment-card moment-slide shared-card moment-card--with-image">
+                  <div class="moment-card__media moment-card__media--feature" role="img" aria-label="Espacio reservado para recuerdo de Minecraft"></div>
                   <h3>Minecraft</h3>
                   <p>Un mundo más para nosotros, pero contigo hasta eso se siente distinto.</p>
                 </article>
@@ -180,8 +187,8 @@
                   </p>
                 </article>
 
-                <article class="card moment-card moment-slide shared-card">
-                  <div class="moment-card__media" role="img" aria-label="Espacio reservado para recuerdo de Dead by Daylight"></div>
+                <article class="card moment-card moment-slide shared-card moment-card--with-image">
+                  <div class="moment-card__media moment-card__media--feature" role="img" aria-label="Espacio reservado para recuerdo de Dead by Daylight"></div>
                   <h3>Dead by Daylight</h3>
                   <p>Contigo hasta los sustos y las ventas que me haces terminan siendo recuerdos bonitos.</p>
                 </article>
@@ -243,22 +250,28 @@
         <div class="container">
           <h2>La distancia</h2>
           <div class="scene-hooks" data-scene-hooks aria-hidden="true"></div>
-          <div class="card intimate-card">
-            <p>
-              Hay algo muy especial en todo esto, y es que aunque nunca nos hemos visto en persona,
-              lo que hemos construido se siente demasiado real. A veces la distancia parecería algo
-              grande, pero contigo he sentido que incluso eso puede volverse más pequeño.
-            </p>
-            <p>
-              Tú estando en Colombia y yo en Brasil, aun así siento que haces parte de mis días y de
-              mis noches de una forma que no imaginaba. Y eso me parece increíble, porque me demuestra
-              que hay conexiones que van mucho más allá de la cercanía física.
-            </p>
-            <p>
-              Dormir contigo por llamada, hablar antes de quedarnos dormidos y despertar sabiendo que
-              sigues ahí hace que todo se sienta más cercano, más cálido y más verdadero. La distancia
-              existe, sí, pero no ha sido capaz de impedir que esto se sienta especial.
-            </p>
+          <div class="scene-layout scene-layout--float">
+            <div class="card intimate-card">
+              <p>
+                Hay algo muy especial en todo esto, y es que aunque nunca nos hemos visto en persona,
+                lo que hemos construido se siente demasiado real. A veces la distancia parecería algo
+                grande, pero contigo he sentido que incluso eso puede volverse más pequeño.
+              </p>
+              <p>
+                Tú estando en Colombia y yo en Brasil, aun así siento que haces parte de mis días y de
+                mis noches de una forma que no imaginaba. Y eso me parece increíble, porque me demuestra
+                que hay conexiones que van mucho más allá de la cercanía física.
+              </p>
+              <p>
+                Dormir contigo por llamada, hablar antes de quedarnos dormidos y despertar sabiendo que
+                sigues ahí hace que todo se sienta más cercano, más cálido y más verdadero. La distancia
+                existe, sí, pero no ha sido capaz de impedir que esto se sienta especial.
+              </p>
+            </div>
+            <aside class="float-slot float-slot--call" aria-hidden="true"></aside>
+          </div>
+          <div class="song-hook" data-song-slot>
+            <button class="song-hook__btn" type="button" disabled aria-disabled="true">Canción de este momento (pronto)</button>
           </div>
           <div class="scene-nav">
             <button class="btn btn--soft scene-next" type="button" data-next="comienzo">Continuar</button>
@@ -285,6 +298,9 @@
               algo todavía más grande, más profundo y más nuestro.
             </p>
           </article>
+          <div class="song-hook" data-song-slot>
+            <button class="song-hook__btn" type="button" disabled aria-disabled="true">Canción de este momento (pronto)</button>
+          </div>
           <div class="scene-nav">
             <button class="btn btn--soft scene-next" type="button" data-next="carta-final">Quiero leer tu carta</button>
           </div>
@@ -295,6 +311,9 @@
         <div class="container">
           <h2>Para mi toxiquita</h2>
           <div class="scene-hooks" data-scene-hooks aria-hidden="true"></div>
+          <div class="song-hook song-hook--final" data-song-slot>
+            <button class="song-hook__btn" type="button" disabled aria-disabled="true">Canción de este momento (pronto)</button>
+          </div>
 
           <div class="letter-wrap audio-ready">
             <article class="card secret-letter">
