@@ -1,27 +1,11 @@
 const startJourneyBtn = document.querySelector('#startJourney');
 const firstSection = document.querySelector('#como-empezo');
-const toggleLetterBtn = document.querySelector('#toggleLetter');
-const secretLetter = document.querySelector('#secretLetter');
 const revealElements = document.querySelectorAll('.reveal');
 
 // Scroll al iniciar el recorrido
 if (startJourneyBtn && firstSection) {
   startJourneyBtn.addEventListener('click', () => {
     firstSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-}
-
-// Carta final
-if (toggleLetterBtn && secretLetter) {
-  toggleLetterBtn.addEventListener('click', () => {
-    const isExpanded = toggleLetterBtn.getAttribute('aria-expanded') === 'true';
-    toggleLetterBtn.setAttribute('aria-expanded', String(!isExpanded));
-    secretLetter.hidden = isExpanded;
-
-    const textNode = toggleLetterBtn.querySelector('.envelope__text');
-    if (textNode) {
-      textNode.textContent = isExpanded ? 'Abrir mensaje' : 'Cerrar mensaje';
-    }
   });
 }
 
