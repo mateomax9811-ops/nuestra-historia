@@ -238,10 +238,6 @@ p {
   padding: 1.25rem;
 }
 
-.letter-card {
-  max-width: 760px;
-}
-
 .moments-grid {
   margin-top: 2rem;
   display: grid;
@@ -259,7 +255,7 @@ p {
 }
 
 .moment-card__media {
-  height: 140px;
+  height: 120px;
   border-radius: var(--radius-sm);
   margin-bottom: 0.8rem;
   background:
@@ -297,12 +293,21 @@ p {
   background: linear-gradient(180deg, rgba(255, 233, 244, 0.32), rgba(255, 246, 250, 0.8));
 }
 
-.intimate-card {
-  max-width: 700px;
+
+.letter-card,
+.intimate-card,
+.beginning-card {
+  max-width: 820px;
 }
 
-.beginning-card {
-  max-width: 760px;
+.letter-card p + p,
+.intimate-card p + p,
+.beginning-card p + p {
+  margin-top: 1rem;
+}
+
+.moment-card p {
+  color: var(--text-soft);
 }
 
 /* Carta final */
@@ -405,13 +410,14 @@ p {
 }
 
 @media (min-width: 700px) {
+  .moment-card__media {
+    height: 135px;
+  }
+
   .moments-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .moment-card--wide {
-    grid-column: span 2;
-  }
 
   .two-column {
     grid-template-columns: 1fr 1fr;
