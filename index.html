@@ -19,172 +19,319 @@
       <span class="cloud cloud-2"></span>
       <span class="heart heart-1">❤</span>
       <span class="heart heart-2">❤</span>
+      <span class="bow bow-1">🎀</span>
+      <span class="bow bow-2">🎀</span>
+      <span class="petal petal-1"></span>
+      <span class="petal petal-2"></span>
     </div>
 
-    <header class="hero reveal" id="inicio">
+    <header class="hero" id="inicio">
       <div class="hero__content container">
-        <p class="eyebrow">Un rincón hecho con cariño</p>
-        <h1>Nuestra historia</h1>
+        <p class="eyebrow">Para mi toxiquita</p>
+        <h1>El comienzo de nuestra historia</h1>
         <p class="hero__subtitle">
-          Entre risas, partidas y noches eternas, fuimos creando algo tan bonito que ya se
-          siente como hogar.
+          A veces todo empieza con una voz al azar, una partida cualquiera y una conexión que ya no
+          se vuelve a olvidar.
         </p>
-        <button class="btn btn--primary" id="startJourney" type="button">Comenzar el recorrido</button>
+        <button class="btn btn--primary" id="startJourney" type="button">Comenzar</button>
       </div>
       <div class="hero__glow" aria-hidden="true"></div>
     </header>
 
     <main>
-      <section class="section reveal" id="como-empezo">
+      <section class="section reveal scene scene--future-ready" id="como-empezo" hidden data-future-media data-future-audio>
         <div class="container">
           <h2>Cómo empezó todo</h2>
-          <article class="card letter-card">
-            <p>
-              <!-- TODO: Personalizar este texto con su primer recuerdo juntos -->
-              Todo empezó con un mensaje cualquiera... de esos que parecen pequeños, pero que sin
-              darte cuenta, cambian el ritmo de los días. Lo que comenzó como una conversación
-              casual fue creciendo con cada broma, con cada "¿estás?" y con cada noche que se hizo
-              más corta por hablar contigo.
-            </p>
-            <p>
-              <!-- TODO: Añadir una anécdota exacta del inicio de la amistad -->
-              A pesar de la distancia, hubo algo que encajó desde el principio: la calma de poder
-              ser nosotros mismos.
-            </p>
-          </article>
+          <div class="scene-hooks" data-scene-hooks aria-hidden="true"></div>
+          <div class="scene-layout scene-layout--float">
+            <article class="card letter-card">
+              <p>
+                Todo empezó en esa partida en Inferno, en el site de A, aunque en ese momento ninguno
+                de los dos sabía todo lo que iba a pasar después. Lo que más recuerdo es haberte dicho
+                “planta, planta, planta”, porque tú tenías la bomba, y escucharte responder
+                repitiéndolo con ese tono juguetón que, aaaa, me encanta. Desde ese día se me quedó
+                grabado. Fue algo simple, pero contigo hasta lo más simple se siente diferente y
+                especial.
+              </p>
+              <p>
+                Después de esa partida te invité a jugar más, y tú aceptaste. Entre partidas y
+                mensajes, te fui conociendo un poco más. Y desde entonces sentí que jugar contigo no se
+                sentía como jugar con cualquier otra persona. Contigo nunca ha importado ganar; lo que
+                realmente importa es pasar tiempo juntos, reírnos, trollear, hacer nuestros rusheos y
+                disfrutar de esa forma tan nuestra de estar juntos. Para mí, eso ya es ganar.
+              </p>
+              <p>
+                Desde el principio me dio curiosidad tu forma de ser, y esa curiosidad sigue viva hasta
+                el día de hoy. Cada vez que conozco algo nuevo de ti, me encantas todavía más. Hay algo
+                en ti que te hace auténtica, única, como si fueras una de esas cosas irrepetibles que
+                existen una sola vez en medio de este vasto universo.
+              </p>
+            </article>
+            <aside class="float-slot float-slot--inferno" aria-hidden="true"></aside>
+          </div>
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="pausa-reencuentro">Quiero ver más</button>
+          </div>
         </div>
       </section>
 
-      <section class="section reveal" id="momentos">
+      <section class="section section--intimate reveal scene" id="pausa-reencuentro" hidden>
         <div class="container">
-          <h2>Nuestros momentos</h2>
-          <p class="section__intro">Un mini timeline de todo lo que nos hizo decir: "qué bonito coincidir".</p>
-
-          <div class="moments-grid">
-            <article class="card moment-card">
-              <div class="moment-card__media" role="img" aria-label="Placeholder de captura de CS2"></div>
-              <h3>CS2</h3>
-              <p>
-                <!-- TODO: Cambiar por una jugada, ronda o frase interna -->
-                Entre estrategias improvisadas y risas, descubrimos que incluso perder juntos se siente bien.
-              </p>
-            </article>
-
-            <article class="card moment-card">
-              <div class="moment-card__media" role="img" aria-label="Placeholder de captura de Minecraft"></div>
-              <h3>Minecraft</h3>
-              <p>
-                <!-- TODO: Añadir recuerdo de construcción, mundo o aventura -->
-                Bloque por bloque, también fuimos construyendo nuestro propio lugarcito.
-              </p>
-            </article>
-
-            <article class="card moment-card">
-              <div class="moment-card__media" role="img" aria-label="Placeholder de captura de Dead by Daylight"></div>
-              <h3>Dead by Daylight</h3>
-              <p>
-                <!-- TODO: Personalizar con momentos de tensión/diversión -->
-                Gritos, sustos y coordinación dudosa... pero contigo hasta el caos se vuelve divertido.
-              </p>
-            </article>
-
-            <article class="card moment-card">
-              <div class="moment-card__media" role="img" aria-label="Placeholder de captura de Clash Royale"></div>
-              <h3>Clash Royale</h3>
-              <p>
-                <!-- TODO: Añadir frase de pique sano o victoria inolvidable -->
-                Entre cartas y piques tiernos, cada partida termina siendo otro recuerdo favorito.
-              </p>
-            </article>
-
-            <article class="card moment-card moment-card--wide">
-              <div class="moment-card__media" role="img" aria-label="Placeholder de noches en llamada"></div>
-              <h3>Noches en llamada hablando de todo</h3>
-              <p>
-                <!-- TODO: Completar con temas, bromas internas y frases reales -->
-                De repente eran las 3 a.m. y seguíamos hablando de la vida, del futuro y de cualquier tontería que nos hiciera sonreír.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--soft reveal" id="especial">
-        <div class="container two-column">
-          <div>
-            <h2>Lo especial de ti</h2>
-            <p class="section__intro">
-              Hay personas que llegan sin hacer ruido y terminan siendo imprescindibles.
-            </p>
-          </div>
-          <div class="card quote-card">
-            <ul>
-              <li><!-- TODO: Reemplazar por cualidades reales -->Tu forma de escuchar.</li>
-              <li><!-- TODO: Reemplazar por una frase personal -->La calma que me das incluso en días raros.</li>
-              <li><!-- TODO: Reemplazar por detalle único -->Tu risa cuando algo te da mucha gracia.</li>
-              <li><!-- TODO: Reemplazar por algo íntimo -->La sensación de que contigo todo se siente más fácil.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--intimate reveal" id="distancia">
-        <div class="container">
-          <h2>La distancia</h2>
+          <h2>Pausa y reencuentro</h2>
           <div class="card intimate-card">
             <p>
-              Nunca nos hemos visto en persona, y aun así hay una verdad que no se puede negar:
-              lo que construimos existe, se siente y acompaña.
+              No todo en nuestra historia ha sido lineal, y creo que eso también la hace más real.
+              Hubo un momento en el que dejamos de hablar, y aunque fue una pausa que se sintió,
+              nunca borró lo especial que ya habías dejado en mí.
             </p>
             <p>
-              <!-- TODO: Añadir reflexión personal sobre la distancia -->
-              La distancia no borró nada; al contrario, nos enseñó que hay conexiones que nacen del tiempo, la paciencia y el cariño real.
+              Y cuando este año volvimos a pasar tiempo juntos, sentí que algo entre nosotros había
+              cambiado. Como si todo hubiera regresado con más fuerza, con más cariño y con una
+              conexión todavía más bonita. Volver a ti de esta manera ha sido una de esas cosas que
+              simplemente se sienten bien en el corazón.
             </p>
+            <p>
+              Ahora, cuando hablo contigo, cuando me río contigo y cuando compartimos nuestras noches,
+              siento que lo nuestro volvió distinto: más bonito, más sincero y más fuerte.
+            </p>
+          </div>
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="momentos">Continuar</button>
           </div>
         </div>
       </section>
 
-      <section class="section reveal" id="comienzo">
+      <section class="section reveal scene scene--future-ready" id="momentos" hidden data-future-media data-future-audio>
         <div class="container">
-          <h2>Tal vez esto es solo el comienzo</h2>
-          <article class="card beginning-card">
-            <p>
-              Quizá esta historia empezó como amistad... y quizá siga siendo eso, pero más profundo,
-              más bonito, más nuestro.
-            </p>
-            <p>
-              <!-- TODO: Escribir aquí una promesa, deseo o plan futuro -->
-              No hace falta correr. Me gusta pensar que lo mejor todavía nos está esperando, a su tiempo.
-            </p>
-          </article>
+          <h2>Nuestros momentos</h2>
+          <div class="scene-hooks" data-scene-hooks aria-hidden="true"></div>
+          <p class="section__intro section__intro--card">
+            A veces pienso en todo lo que ya hemos compartido, y me gusta darme cuenta de que no son
+            pocas cosas. Entre juegos, risas, llamadas, series y momentos simples, hemos ido llenando
+            nuestra historia de recuerdos que para mí ya tienen un lugar muy especial.
+          </p>
+
+          <div class="moments-carousel media-ready" data-carousel>
+            <button class="carousel-control carousel-control--prev" type="button" aria-label="Recuerdo anterior">
+              ‹
+            </button>
+
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <article class="card moment-card moment-slide is-active">
+                  <div class="moment-card__media" role="img" aria-label="Espacio reservado para recuerdo cuando jugamos juntos"></div>
+                  <h3>Cuando jugamos juntos</h3>
+                  <p>
+                    Jugar contigo nunca se ha sentido como jugar con cualquier otra persona. Contigo da
+                    igual si ganamos o no, porque al final lo que más disfruto es compartir ese rato
+                    contigo, reírnos, trollear y hacer de cualquier partida algo nuestro.
+                  </p>
+                </article>
+
+                <article class="card moment-card moment-slide">
+                  <div class="moment-card__media" role="img" aria-label="Espacio reservado para recuerdo de nuestros rusheos"></div>
+                  <h3>Nuestros rusheos</h3>
+                  <p>
+                    Me encanta que contigo hasta el caos se sienta bien. Nuestros rusheos, nuestras
+                    tonterías y esa forma tan nuestra de jugar hacen que todo sea más divertido. A veces
+                    pareciera que estamos en nuestra propia partida aparte del resto del mundo, y
+                    honestamente me encanta que sea así.
+                  </p>
+                </article>
+
+                <article class="card moment-card moment-slide">
+                  <div class="moment-card__media" role="img" aria-label="Espacio reservado para recuerdo haciendo tiltear al team"></div>
+                  <h3>Haciendo tiltear al team</h3>
+                  <p>
+                    Hay algo demasiado divertido en cómo terminamos haciendo enojar al equipo solo por
+                    ser nosotros. Entre bromas, trolls y cosas raras, siempre encontramos la forma de
+                    reírnos juntos. Y aunque a veces nos insulten, incluso eso termina volviéndose parte
+                    de esos momentos que contigo nunca se olvidan.
+                  </p>
+                </article>
+
+                <article class="card moment-card moment-slide">
+                  <div class="moment-card__media" role="img" aria-label="Espacio reservado para recuerdo de jornadas laborales de CS"></div>
+                  <h3>Nuestras jornadas laborales de CS</h3>
+                  <p>
+                    Hubo un tiempo en el que eran horas de juego sin parar de CS, a veces de hasta 8
+                    horas o más. Y lo mejor es que contigo incluso eso se sentía demasiado bien, como si
+                    pasar tantas horas juntos fuera lo más natural del mundo.
+                  </p>
+                </article>
+
+                <article class="card moment-card moment-slide">
+                  <div class="moment-card__media" role="img" aria-label="Espacio reservado para recuerdo de dormir en llamada"></div>
+                  <h3>Dormir contigo, aun en la distancia</h3>
+                  <p>
+                    De todas las cosas bonitas que hemos construido, hay algo en dormir contigo por
+                    llamada que se siente demasiado especial. Quedarnos hablando, hacernos preguntas antes
+                    de dormir y despertar sabiendo que sigues ahí es una de esas cosas que me emocionan
+                    más de lo que puedo explicar. Incluso en la distancia, contigo eso se siente cercano,
+                    real y hermoso.
+                  </p>
+                </article>
+
+                <article class="card moment-card moment-slide shared-card moment-card--with-image">
+                  <div class="moment-card__media moment-card__media--feature" role="img" aria-label="Espacio reservado para recuerdo de Minecraft"></div>
+                  <h3>Minecraft</h3>
+                  <p>Un mundo más para nosotros, pero contigo hasta eso se siente distinto.</p>
+                </article>
+
+                <article class="card moment-card moment-slide shared-card">
+                  <div class="moment-card__media" role="img" aria-label="Espacio reservado para recuerdo de Clash Royale"></div>
+                  <h3>Clash Royale</h3>
+                  <p>
+                    Hasta perdiendo cada partida, contigo termino pasándola mejor de lo normal. Somos
+                    malísimos, pero contigo eso también me encanta.
+                  </p>
+                </article>
+
+                <article class="card moment-card moment-slide shared-card moment-card--with-image">
+                  <div class="moment-card__media moment-card__media--feature" role="img" aria-label="Espacio reservado para recuerdo de Dead by Daylight"></div>
+                  <h3>Dead by Daylight</h3>
+                  <p>Contigo hasta los sustos y las ventas que me haces terminan siendo recuerdos bonitos.</p>
+                </article>
+
+                <article class="card moment-card moment-slide shared-card">
+                  <div class="moment-card__media" role="img" aria-label="Espacio reservado para recuerdo de Bebé Reno"></div>
+                  <h3>Bebé Reno</h3>
+                  <p>
+                    También me gusta que no todo sea jugar; compartir cosas como ver una serie contigo
+                    hace que todo se sienta aún más cercano, incluso cuando sé que no es lo que más te
+                    gusta hacer.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <button class="carousel-control carousel-control--next" type="button" aria-label="Siguiente recuerdo">
+              ›
+            </button>
+          </div>
+
+          <div class="carousel-dots" aria-hidden="true"></div>
+
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="especial">Seguir leyendo</button>
+          </div>
         </div>
       </section>
 
-      <section class="section reveal" id="carta-final">
+      <section class="section section--soft reveal scene" id="especial" hidden>
         <div class="container">
-          <h2>Carta final</h2>
-          <p class="section__intro">Un mensaje secreto para abrir cuando quieras.</p>
+          <h2>Lo especial de ti</h2>
+          <article class="card special-story">
+            <p>
+              Hay algo en ti que desde el primer día me llamó la atención, y con el tiempo eso solo ha
+              crecido más. Cada vez que conozco algo nuevo de ti, termino más loco por tu forma de
+              ser y más seguro de que eres una persona demasiado especial.
+            </p>
+            <p>
+              Me encanta tu sensibilidad, porque en ti no se siente como fragilidad, sino como una
+              forma bonita y auténtica de sentir las cosas. Me encanta también esa manera tan tuya de
+              hacerme reír y de decir verdades sin perder esa ternura que te hace tan única. Contigo
+              todo se siente más natural, más bonito y más real.
+            </p>
+            <p>
+              Y creo que una de las cosas que más valoro es la confianza que siento contigo. Poder
+              hablar de cualquier tema, reírme, contarte cosas, escucharte y sentirme tan bien estando
+              contigo es algo que no pasa todos los días. Hay algo en ti que no se parece a nadie más,
+              y eso hace que mientras más te conozco, más me gustes.
+            </p>
+          </article>
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="distancia">Una cosa más</button>
+          </div>
+        </div>
+      </section>
 
-          <div class="letter-wrap">
-            <button
-              class="envelope"
-              id="toggleLetter"
-              aria-expanded="false"
-              aria-controls="secretLetter"
-              type="button"
-            >
-              <span class="envelope__icon">✉</span>
-              <span class="envelope__text">Abrir mensaje</span>
-            </button>
-
-            <article class="card secret-letter" id="secretLetter" hidden>
+      <section class="section section--intimate reveal scene scene--future-ready" id="distancia" hidden data-future-media data-future-audio>
+        <div class="container">
+          <h2>La distancia</h2>
+          <div class="scene-hooks" data-scene-hooks aria-hidden="true"></div>
+          <div class="scene-layout scene-layout--float">
+            <div class="card intimate-card">
               <p>
-                Gracias por existir de esta forma tan bonita en mi vida. Si algún día nos encontramos,
-                me encantaría que se sintiera exactamente así: familiar, tierno y real.
+                Hay algo muy especial en todo esto, y es que aunque nunca nos hemos visto en persona,
+                lo que hemos construido se siente demasiado real. A veces la distancia parecería algo
+                grande, pero contigo he sentido que incluso eso puede volverse más pequeño.
               </p>
               <p>
-                <!-- TODO: Personalizar con el mensaje más íntimo -->
-                Por ahora, me basta con seguir escribiendo esta historia contigo, paso a paso.
+                Tú estando en Colombia y yo en Brasil, aun así siento que haces parte de mis días y de
+                mis noches de una forma que no imaginaba. Y eso me parece increíble, porque me demuestra
+                que hay conexiones que van mucho más allá de la cercanía física.
+              </p>
+              <p>
+                Dormir contigo por llamada, hablar antes de quedarnos dormidos y despertar sabiendo que
+                sigues ahí hace que todo se sienta más cercano, más cálido y más verdadero. La distancia
+                existe, sí, pero no ha sido capaz de impedir que esto se sienta especial.
+              </p>
+            </div>
+            <aside class="float-slot float-slot--call" aria-hidden="true"></aside>
+          </div>
+          <div class="song-hook" data-song-slot>
+            <button class="song-hook__btn" type="button" disabled aria-disabled="true">Canción de este momento (pronto)</button>
+          </div>
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="comienzo">Continuar</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal scene scene--future-ready" id="comienzo" hidden data-future-media data-future-audio>
+        <div class="container">
+          <h2>Lo nuestro apenas comienza</h2>
+          <div class="scene-hooks" data-scene-hooks aria-hidden="true"></div>
+          <article class="card beginning-card">
+            <p>
+              A veces me gusta pensar que todo esto que hemos construido no se queda solo en lo que ya
+              vivimos, sino también en todo lo que todavía nos falta por compartir. Porque si con
+              distancia, llamadas, juegos y momentos simples hemos logrado crear algo tan bonito,
+              entonces me emociona imaginar todo lo que aún nos falta por vivir.
+            </p>
+            <p>
+              No sé exactamente cómo se escriben las historias bonitas, pero sí sé que contigo muchas
+              cosas se han sentido distintas, más intensas y más especiales. Y por eso cada vez me nace
+              más la idea de compartir mi vida contigo y de estar en la tuya de la misma manera. Me
+              gusta pensar que quizá esto no sea solo una historia bonita, sino también el comienzo de
+              algo todavía más grande, más profundo y más nuestro.
+            </p>
+          </article>
+          <div class="song-hook" data-song-slot>
+            <button class="song-hook__btn" type="button" disabled aria-disabled="true">Canción de este momento (pronto)</button>
+          </div>
+          <div class="scene-nav">
+            <button class="btn btn--soft scene-next" type="button" data-next="carta-final">Quiero leer tu carta</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal scene section--final scene--future-ready" id="carta-final" hidden data-future-media data-future-audio>
+        <div class="container">
+          <h2>Para mi toxiquita</h2>
+          <div class="scene-hooks" data-scene-hooks aria-hidden="true"></div>
+          <div class="song-hook song-hook--final" data-song-slot>
+            <button class="song-hook__btn" type="button" disabled aria-disabled="true">Canción de este momento (pronto)</button>
+          </div>
+
+          <div class="letter-wrap audio-ready">
+            <article class="card secret-letter">
+              <p>
+                Quería que al final de esta página te quedara algo muy claro: eres una persona
+                demasiado especial para mí. No solo por todo lo que hemos vivido, sino por la forma en
+                la que llegaste a mi vida y por todo lo que has ido significando con el tiempo.
+              </p>
+              <p>
+                Gracias por estar, por hacerme reír, por acompañarme, por compartir tus días y tus
+                noches conmigo, y por dejarme entrar también en tu mundo. Contigo muchas cosas se
+                sienten distintas, más bonitas y más reales, y eso es algo que valoro más de lo que a
+                veces sé explicar.
+              </p>
+              <p>
+                Tengo claro lo que quiero, y es comenzar a construir contigo algo más que solo una
+                amistad. Quiero seguir compartiendo mi vida contigo, seguir estando en la tuya y seguir
+                haciendo de esto algo cada vez más nuestro.
               </p>
             </article>
           </div>
@@ -197,14 +344,6 @@
         <p>Hecho con cariño ✿</p>
       </div>
     </footer>
-
-    <!-- TODO: Cuando quieras agregar música, descomenta y ajusta la ruta del archivo -->
-    <!--
-    <audio id="bgMusic" controls>
-      <source src="assets/music/tu-cancion.mp3" type="audio/mpeg" />
-      Tu navegador no soporta audio HTML5.
-    </audio>
-    -->
 
     <script src="script.js"></script>
   </body>
