@@ -65,13 +65,18 @@ p {
   max-width: 760px;
 }
 
-
 .section__intro--card {
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 0.95rem 1.05rem;
   box-shadow: 0 8px 18px rgba(235, 118, 171, 0.08);
+}
+
+#momentos .section__intro--card {
+  width: min(760px, 100%);
+  margin: 0.2rem auto 0;
+  text-align: left;
 }
 
 .scene-layout--float {
@@ -102,6 +107,23 @@ p {
   display: block;
   object-fit: cover;
   object-position: center;
+}
+
+.inferno-memory {
+  position: relative;
+}
+
+.inferno-memory__mini {
+  position: absolute;
+  right: -14px;
+  bottom: 14px;
+  width: clamp(92px, 24vw, 120px);
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  border: 2px solid rgba(255, 245, 250, 0.95);
+  box-shadow: 0 8px 20px rgba(235, 118, 171, 0.2);
+  object-fit: cover;
+  background: #fff8fc;
 }
 
 .song-hook {
@@ -358,13 +380,17 @@ p {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.moment-card:not(.moment-card--with-image) {
+  padding-bottom: 1.05rem;
+}
+
 .moment-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 24px rgba(235, 118, 171, 0.14);
 }
 
 .moment-card__media {
-  height: 96px;
+  height: 68px;
   border-radius: var(--radius-sm);
   margin-bottom: 0.8rem;
   background:
@@ -379,7 +405,7 @@ p {
 }
 
 .moments-carousel {
-  margin-top: 1.25rem;
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
@@ -399,6 +425,7 @@ p {
 .moment-slide {
   min-width: 100%;
   margin: 0;
+  height: auto;
 }
 
 .carousel-control {
@@ -514,6 +541,14 @@ p {
 
 .moment-card p {
   color: var(--text-soft);
+}
+
+.moment-card--with-image {
+  padding-bottom: 1.15rem;
+}
+
+.moment-card--with-image .moment-card__media {
+  margin-bottom: 0.85rem;
 }
 
 /* Carta final */
@@ -670,11 +705,21 @@ p {
     max-width: 260px;
     margin: 0.2rem auto 0;
   }
+
+  .inferno-memory__mini {
+    right: -10px;
+    bottom: 10px;
+    width: 92px;
+  }
+
+  #momentos .section__intro--card {
+    margin-top: 0.15rem;
+  }
 }
 
 @media (min-width: 700px) {
   .moment-card__media {
-    height: 115px;
+    height: 78px;
   }
 
   .moments-grid {
@@ -713,6 +758,15 @@ p {
 
   .section {
     padding: 3.6rem 0;
+  }
+
+  #momentos .section__intro--card {
+    margin-left: 0;
+  }
+
+  .inferno-memory__mini {
+    right: -18px;
+    bottom: 18px;
   }
 }
 
