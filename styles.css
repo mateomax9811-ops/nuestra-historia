@@ -62,7 +62,7 @@ p {
 
 .section__intro {
   color: var(--text-soft);
-  max-width: 640px;
+  max-width: 760px;
 }
 
 /* Decorative elements */
@@ -351,7 +351,7 @@ p {
 
 
 .special-story {
-  max-width: 900px;
+  max-width: 920px;
 }
 
 .special-story p + p {
@@ -394,7 +394,7 @@ p {
 .letter-card,
 .intimate-card,
 .beginning-card {
-  max-width: 900px;
+  max-width: 920px;
 }
 
 .letter-card p + p,
@@ -423,12 +423,44 @@ p {
 
 
 
+
+.scene {
+  transition: padding 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+}
+
+.scene .card {
+  transition: transform 0.35s ease, opacity 0.35s ease, box-shadow 0.35s ease;
+}
+
+.scene.is-collapsed {
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  opacity: 0.78;
+}
+
+.scene.is-collapsed .card {
+  transform: scale(0.992);
+  box-shadow: 0 6px 14px rgba(235, 118, 171, 0.08);
+}
+
+.scene.is-collapsed .scene-nav {
+  margin-top: 0.55rem;
+}
+
+.scene-hooks {
+  display: none;
+}
+
+.scene--future-ready {
+  position: relative;
+}
+
 .scene[hidden] {
   display: none;
 }
 
 .scene-nav {
-  margin-top: 0.95rem;
+  margin-top: 0.8rem;
   display: flex;
   justify-content: center;
 }
@@ -545,7 +577,7 @@ p {
   }
 
   .section {
-    padding: 4rem 0;
+    padding: 3.6rem 0;
   }
 }
 

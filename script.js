@@ -2,6 +2,7 @@ const startJourneyBtn = document.querySelector('#startJourney');
 const firstSection = document.querySelector('#como-empezo');
 const nextSceneButtons = document.querySelectorAll('.scene-next');
 const carousels = document.querySelectorAll('[data-carousel]');
+let activeScene = null;
 
 const revealScene = (sceneId) => {
   const scene = document.querySelector(`#${sceneId}`);
@@ -12,6 +13,13 @@ const revealScene = (sceneId) => {
     scene.hidden = false;
     scene.classList.add('is-visible');
   }
+
+  if (activeScene && activeScene !== scene) {
+    activeScene.classList.add('is-collapsed');
+  }
+
+  scene.classList.remove('is-collapsed');
+  activeScene = scene;
 
   requestAnimationFrame(() => {
     scene.scrollIntoView({ behavior: 'smooth', block: 'start' });
