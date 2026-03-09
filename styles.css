@@ -282,16 +282,17 @@ p {
 
 
 .special-story {
-  max-width: 860px;
+  max-width: 900px;
 }
 
 .special-story p + p {
   margin-top: 1rem;
 }
 
-.special-highlights {
-  margin-top: 1.4rem;
+#especial .special-story {
+  margin-top: 0.8rem;
 }
+
 
 
 
