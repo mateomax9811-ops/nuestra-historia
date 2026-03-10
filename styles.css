@@ -74,8 +74,9 @@ p {
 }
 
 #momentos .section__intro--card {
-  width: min(840px, 100%);
-  margin: 0.1rem auto 0;
+  width: 100%;
+  max-width: none;
+  margin: 0.2rem 0 0.7rem;
   text-align: left;
 }
 
@@ -759,7 +760,7 @@ p {
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(235, 118, 171, 0.34), 0 12px 24px rgba(235, 118, 171, 0.2);
 }
 .media-ready .moment-card__media {
-  opacity: 0.72;
+  opacity: 1;
 }
 
 .audio-ready {
