@@ -228,9 +228,52 @@ p {
 .cloud,
 .heart,
 .bow,
-.petal {
+.petal,
+.decor-image {
   position: absolute;
   opacity: 0.35;
+}
+
+.decor-image {
+  width: clamp(92px, 10vw, 152px);
+  aspect-ratio: 1 / 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: -1;
+  filter: saturate(0.95) blur(0.2px);
+}
+
+.decor-image--melody-hero {
+  top: 12%;
+  right: 7%;
+  opacity: 0.14;
+  background-image: url('assets/images/mymelody-face-clean.webp');
+}
+
+.decor-image--melody-final {
+  bottom: 4%;
+  right: 8%;
+  opacity: 0.1;
+  width: clamp(86px, 9vw, 132px);
+  background-image: url('assets/images/mymelody-face-clean.webp');
+}
+
+.decor-image--lily-distance {
+  top: 56%;
+  left: 5.5%;
+  opacity: 0.13;
+  width: clamp(98px, 11vw, 160px);
+  background-image: url('assets/images/pink-lily-clean.webp');
+}
+
+.decor-image--lily-beginning {
+  top: 72%;
+  right: 14%;
+  opacity: 0.11;
+  width: clamp(92px, 10vw, 148px);
+  background-image: url('assets/images/pink-lily-clean.webp');
 }
 
 .sparkle {
