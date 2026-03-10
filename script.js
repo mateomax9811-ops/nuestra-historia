@@ -6,10 +6,8 @@ let activeScene = null;
 
 const musicPanelsConfig = {
   distanceMusic: {
-    provider: 'youtube',
-    youtubeUrl: 'https://www.youtube.com/embed/BkwQjVBN23o',
-    start: 0,
-    end: 140,
+    provider: 'spotify',
+    spotifyEmbedUrl: 'https://open.spotify.com/embed/track/6eTCWWKBtnJI9Ui9OlLEyO?utm_source=generator',
   },
   beginningMusic: {
     provider: 'spotify',
@@ -116,6 +114,8 @@ const setupMusicPanels = () => {
   const musicPanels = Array.from(document.querySelectorAll('.music-panel'));
   if (!musicButtons.length || !musicPanels.length) return;
 
+  let activePanelId = null;
+
   const closePanel = (panel, button) => {
     panel.classList.remove('is-open');
     button.setAttribute('aria-expanded', 'false');
@@ -132,23 +132,6 @@ const setupMusicPanels = () => {
 
   const buildEmbed = (config) => {
     if (!config) return null;
-
-    if (config.provider === 'youtube') {
-      if (!config.youtubeUrl) return null;
-      const iframe = document.createElement('iframe');
-      const url = new URL(config.youtubeUrl);
-      if (typeof config.start === 'number') url.searchParams.set('start', String(config.start));
-      if (typeof config.end === 'number') url.searchParams.set('end', String(config.end));
-      url.searchParams.set('rel', '0');
-      iframe.src = url.toString();
-      iframe.title = 'Reproductor de YouTube';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-      iframe.allowFullscreen = true;
-      iframe.loading = 'lazy';
-      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-      iframe.height = '230';
-      return iframe;
-    }
 
     if (config.provider === 'spotify') {
       if (!config.spotifyEmbedUrl) return null;
@@ -174,8 +157,18 @@ const setupMusicPanels = () => {
     button.addEventListener('click', () => {
       const shouldOpen = !panel.classList.contains('is-open');
 
+      if (activePanelId && activePanelId !== targetId) {
+        const activePanel = document.getElementById(activePanelId);
+        const activeButton = musicButtons.find((item) => item.getAttribute('data-music-target') === activePanelId);
+        if (activePanel && activeButton) {
+          closePanel(activePanel, activeButton);
+        }
+        activePanelId = null;
+      }
+
       if (!shouldOpen) {
         closePanel(panel, button);
+        activePanelId = null;
         return;
       }
 
@@ -195,6 +188,7 @@ const setupMusicPanels = () => {
 
       panel.hidden = false;
       button.setAttribute('aria-expanded', 'true');
+      activePanelId = targetId;
       requestAnimationFrame(() => panel.classList.add('is-open'));
     });
   });
