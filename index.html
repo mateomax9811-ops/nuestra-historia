@@ -267,8 +267,20 @@
               <img class="float-slot__image" src="assets/images/llamada-distancia-4x5-800x1000.webp" alt="Recuerdo de nuestra llamada a distancia" loading="lazy" />
             </aside>
           </div>
-          <div class="song-hook" data-song-slot>
-            <button class="song-hook__btn" type="button" disabled aria-disabled="true">Canción de este momento (pronto)</button>
+          <div class="song-hook" data-music-block="distanceMusic">
+            <button
+              class="song-hook__btn song-hook__btn--music"
+              type="button"
+              data-music-target="distanceMusic"
+              aria-expanded="false"
+              aria-controls="distanceMusic"
+            >
+              <span class="song-hook__icon" aria-hidden="true">▶</span>
+              Escuchar esta parte
+            </button>
+            <div class="music-panel" id="distanceMusic" hidden>
+              <div class="music-panel__embed" data-music-embed></div>
+            </div>
           </div>
           <div class="scene-nav">
             <button class="btn btn--soft scene-next" type="button" data-next="comienzo">Continuar</button>
@@ -295,8 +307,20 @@
               algo todavía más grande, más profundo y más nuestro.
             </p>
           </article>
-          <div class="song-hook" data-song-slot>
-            <button class="song-hook__btn" type="button" disabled aria-disabled="true">Canción de este momento (pronto)</button>
+          <div class="song-hook" data-music-block="beginningMusic">
+            <button
+              class="song-hook__btn song-hook__btn--music"
+              type="button"
+              data-music-target="beginningMusic"
+              aria-expanded="false"
+              aria-controls="beginningMusic"
+            >
+              <span class="song-hook__icon" aria-hidden="true">▶</span>
+              Escuchar esta canción
+            </button>
+            <div class="music-panel" id="beginningMusic" hidden>
+              <div class="music-panel__embed" data-music-embed></div>
+            </div>
           </div>
           <div class="scene-nav">
             <button class="btn btn--soft scene-next" type="button" data-next="carta-final">Quiero leer tu carta</button>
