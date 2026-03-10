@@ -7,17 +7,13 @@ let activeScene = null;
 const musicPanelsConfig = {
   distanceMusic: {
     provider: 'youtube',
-    // TODO: Reemplazar con la URL final de YouTube para esta escena.
-    youtubeUrl: '',
-    // TODO: Definir segundo de inicio del fragmento.
-    start: null,
-    // TODO: Definir segundo de fin del fragmento.
-    end: null,
+    youtubeUrl: 'https://www.youtube.com/embed/BkwQjVBN23o',
+    start: 0,
+    end: 140,
   },
   beginningMusic: {
     provider: 'spotify',
-    // TODO: Reemplazar con la URL final del embed de Spotify para esta escena.
-    spotifyEmbedUrl: '',
+    spotifyEmbedUrl: 'https://open.spotify.com/embed/track/48ZVsNDCnSxbOTL4uz77qZ?utm_source=generator',
   },
 };
 
@@ -177,14 +173,6 @@ const setupMusicPanels = () => {
 
     button.addEventListener('click', () => {
       const shouldOpen = !panel.classList.contains('is-open');
-
-      musicButtons.forEach((otherButton) => {
-        const otherId = otherButton.getAttribute('data-music-target');
-        if (!otherId) return;
-        const otherPanel = document.getElementById(otherId);
-        if (!otherPanel || otherPanel === panel) return;
-        closePanel(otherPanel, otherButton);
-      });
 
       if (!shouldOpen) {
         closePanel(panel, button);
