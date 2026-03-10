@@ -33,7 +33,8 @@ const revealScene = (sceneId) => {
   activeScene = scene;
 
   requestAnimationFrame(() => {
-    scene.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const scrollBlock = scene.classList.contains('scene--final-highlight') ? 'center' : 'start';
+    scene.scrollIntoView({ behavior: 'smooth', block: scrollBlock });
   });
 };
 
