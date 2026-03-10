@@ -13,6 +13,10 @@ const musicPanelsConfig = {
     provider: 'spotify',
     spotifyEmbedUrl: 'https://open.spotify.com/embed/track/48ZVsNDCnSxbOTL4uz77qZ?utm_source=generator',
   },
+  finalMusic: {
+    provider: 'spotify',
+    spotifyEmbedUrl: 'https://open.spotify.com/embed/track/4Z9VQyYxP5mWQxS1hX9QyB?utm_source=generator',
+  },
 };
 
 const revealScene = (sceneId) => {

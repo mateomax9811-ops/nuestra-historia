@@ -74,6 +74,10 @@
             <aside class="float-slot float-slot--inferno inferno-memory">
               <img class="float-slot__image" src="assets/images/a-site-inferno-4x5-800x1000.webp" alt="Recuerdo del site A de Inferno" loading="lazy" />
               <img class="inferno-memory__mini" src="assets/images/steam-first-profile-400x400.webp" alt="Mini recuerdo de tu perfil de Steam" loading="lazy" />
+              <figure class="inferno-memory__hamster">
+                <img src="assets/images/hamster-page-memory.png" alt="Recuerdo de la primera página para hablar contigo" loading="lazy" />
+                <figcaption>La primera página que hice para hablar contigo</figcaption>
+              </figure>
             </aside>
           </div>
           <div class="scene-nav">
@@ -138,6 +142,7 @@
                 </article>
 
                 <article class="card moment-card moment-slide moment-card--text-only" data-card="nuestros-rusheos">
+                  <img class="moment-card__sticker" src="assets/images/pixel-cs-character.png" alt="Sticker pixelado de CS" loading="lazy" />
                   <h3>Nuestros rusheos</h3>
                   <p>
                     Me encanta que contigo hasta el caos se sienta bien. Nuestros rusheos, nuestras
@@ -357,6 +362,21 @@
         <div class="container">
           <h2>Para mi toxiquita</h2>
           <div class="scene-hooks" data-scene-hooks aria-hidden="true"></div>
+          <div class="song-hook song-hook--final" data-music-block="finalMusic">
+            <button
+              class="song-hook__btn song-hook__btn--music song-hook__btn--final"
+              type="button"
+              data-music-target="finalMusic"
+              aria-expanded="false"
+              aria-controls="finalMusic"
+            >
+              <span class="song-hook__icon" aria-hidden="true">▶</span>
+              Quiero dejarte esta canción
+            </button>
+            <div class="music-panel music-panel--final" id="finalMusic" hidden>
+              <div class="music-panel__embed" data-music-embed></div>
+            </div>
+          </div>
           <div class="letter-wrap audio-ready">
             <article class="card secret-letter">
               <p>
