@@ -15,7 +15,7 @@ const musicPanelsConfig = {
   },
   finalMusic: {
     provider: 'spotify',
-    spotifyEmbedUrl: 'https://open.spotify.com/embed/track/46haIwbQpVUkpAQj9V84Gp?utm_source=generator',
+    spotifyEmbedUrl: 'https://open.spotify.com/intl-es/track/46haIwbQpVUkpAQj9V84Gp?si=bf7081ff059a45c5&nd=1&dlsi=0de0a520e8d541d1',
   },
 };
 
@@ -141,7 +141,14 @@ const setupMusicPanels = () => {
     if (config.provider === 'spotify') {
       if (!config.spotifyEmbedUrl) return null;
       const iframe = document.createElement('iframe');
-      iframe.src = config.spotifyEmbedUrl;
+      let spotifySrc = config.spotifyEmbedUrl;
+      if (!spotifySrc.includes('/embed/')) {
+        const trackMatch = spotifySrc.match(/open\.spotify\.com\/(?:intl-[a-z]{2}\/)?track\/([A-Za-z0-9]+)/i);
+        if (trackMatch?.[1]) {
+          spotifySrc = `https://open.spotify.com/embed/track/${trackMatch[1]}?utm_source=generator`;
+        }
+      }
+      iframe.src = spotifySrc;
       iframe.title = 'Reproductor de Spotify';
       iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
       iframe.loading = 'lazy';
