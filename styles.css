@@ -555,30 +555,6 @@ p {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.moment-card__sticker {
-  position: absolute;
-  top: 0.55rem;
-  right: 0.65rem;
-  width: clamp(44px, 9vw, 62px);
-  opacity: 0.9;
-  filter: drop-shadow(0 3px 7px rgba(235, 118, 171, 0.22));
-  pointer-events: none;
-}
-
-.moment-card--text-only {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-  padding-top: 1rem;
-  padding-bottom: 0.95rem;
-}
-
-.moment-card--text-only h3,
-.moment-card--text-only p {
-  margin: 0;
-}
-
 .moment-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 24px rgba(235, 118, 171, 0.14);
@@ -985,12 +961,6 @@ p {
   .inferno-memory__hamster {
     width: 100%;
     margin-top: 0.15rem;
-  }
-
-  .moment-card__sticker {
-    width: 46px;
-    top: 0.45rem;
-    right: 0.45rem;
   }
 
   #carta-final.scene--final-highlight::after {
