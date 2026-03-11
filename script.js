@@ -4,6 +4,21 @@ const nextSceneButtons = document.querySelectorAll('.scene-next');
 const carousels = document.querySelectorAll('[data-carousel]');
 let activeScene = null;
 
+const musicPanelsConfig = {
+  distanceMusic: {
+    provider: 'spotify',
+    spotifyEmbedUrl: 'https://open.spotify.com/embed/track/6eTCWWKBtnJI9Ui9OlLEyO?utm_source=generator',
+  },
+  beginningMusic: {
+    provider: 'spotify',
+    spotifyEmbedUrl: 'https://open.spotify.com/embed/track/48ZVsNDCnSxbOTL4uz77qZ?utm_source=generator',
+  },
+  finalMusic: {
+    provider: 'spotify',
+    spotifyEmbedUrl: 'https://open.spotify.com/intl-es/track/46haIwbQpVUkpAQj9V84Gp?si=bf7081ff059a45c5&nd=1&dlsi=0de0a520e8d541d1',
+  },
+};
+
 const revealScene = (sceneId) => {
   const scene = document.querySelector(`#${sceneId}`);
   if (!scene) return;
@@ -22,7 +37,8 @@ const revealScene = (sceneId) => {
   activeScene = scene;
 
   requestAnimationFrame(() => {
-    scene.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const scrollBlock = scene.classList.contains('scene--final-highlight') ? 'center' : 'start';
+    scene.scrollIntoView({ behavior: 'smooth', block: scrollBlock });
   });
 };
 
@@ -98,6 +114,98 @@ const setupCarousel = (carousel) => {
   updateCarousel();
 };
 
+const setupMusicPanels = () => {
+  const musicButtons = Array.from(document.querySelectorAll('[data-music-target]'));
+  const musicPanels = Array.from(document.querySelectorAll('.music-panel'));
+  if (!musicButtons.length || !musicPanels.length) return;
+
+  let activePanelId = null;
+
+  const closePanel = (panel, button) => {
+    panel.classList.remove('is-open');
+    button.setAttribute('aria-expanded', 'false');
+
+    window.setTimeout(() => {
+      if (!panel.classList.contains('is-open')) {
+        panel.hidden = true;
+      }
+    }, 260);
+
+    const embedSlot = panel.querySelector('[data-music-embed]');
+    if (embedSlot) embedSlot.innerHTML = '';
+  };
+
+  const buildEmbed = (config) => {
+    if (!config) return null;
+
+    if (config.provider === 'spotify') {
+      if (!config.spotifyEmbedUrl) return null;
+      const iframe = document.createElement('iframe');
+      let spotifySrc = config.spotifyEmbedUrl;
+      if (!spotifySrc.includes('/embed/')) {
+        const trackMatch = spotifySrc.match(/open\.spotify\.com\/(?:intl-[a-z]{2}\/)?track\/([A-Za-z0-9]+)/i);
+        if (trackMatch?.[1]) {
+          spotifySrc = `https://open.spotify.com/embed/track/${trackMatch[1]}?utm_source=generator`;
+        }
+      }
+      iframe.src = spotifySrc;
+      iframe.title = 'Reproductor de Spotify';
+      iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+      iframe.loading = 'lazy';
+      iframe.height = '152';
+      return iframe;
+    }
+
+    return null;
+  };
+
+  musicButtons.forEach((button) => {
+    const targetId = button.getAttribute('data-music-target');
+    if (!targetId) return;
+
+    const panel = document.getElementById(targetId);
+    if (!panel) return;
+
+    button.addEventListener('click', () => {
+      const shouldOpen = !panel.classList.contains('is-open');
+
+      if (activePanelId && activePanelId !== targetId) {
+        const activePanel = document.getElementById(activePanelId);
+        const activeButton = musicButtons.find((item) => item.getAttribute('data-music-target') === activePanelId);
+        if (activePanel && activeButton) {
+          closePanel(activePanel, activeButton);
+        }
+        activePanelId = null;
+      }
+
+      if (!shouldOpen) {
+        closePanel(panel, button);
+        activePanelId = null;
+        return;
+      }
+
+      const embedSlot = panel.querySelector('[data-music-embed]');
+      if (embedSlot) {
+        embedSlot.innerHTML = '';
+        const embed = buildEmbed(musicPanelsConfig[targetId]);
+        if (embed) {
+          embedSlot.appendChild(embed);
+        } else {
+          const placeholder = document.createElement('p');
+          placeholder.className = 'music-panel__placeholder';
+          placeholder.textContent = 'Espacio listo para insertar el enlace musical definitivo.';
+          embedSlot.appendChild(placeholder);
+        }
+      }
+
+      panel.hidden = false;
+      button.setAttribute('aria-expanded', 'true');
+      activePanelId = targetId;
+      requestAnimationFrame(() => panel.classList.add('is-open'));
+    });
+  });
+};
+
 // Inicio del recorrido
 if (startJourneyBtn && firstSection) {
   startJourneyBtn.addEventListener('click', () => {
@@ -114,3 +222,4 @@ nextSceneButtons.forEach((button) => {
 });
 
 carousels.forEach(setupCarousel);
+setupMusicPanels();
