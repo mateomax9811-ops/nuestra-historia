@@ -102,6 +102,12 @@ p {
   box-shadow: 0 10px 22px rgba(235, 118, 171, 0.12);
 }
 
+
+.float-slot--inferno {
+  aspect-ratio: auto;
+  overflow: visible;
+}
+
 .float-slot__image {
   width: 100%;
   height: 100%;
@@ -111,13 +117,24 @@ p {
 }
 
 .inferno-memory {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 0.6rem;
+  align-content: start;
+  padding: 0.28rem;
   position: relative;
+}
+
+.inferno-memory__top {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .inferno-memory__mini {
   position: absolute;
-  right: -14px;
-  bottom: 14px;
+  right: -10px;
+  bottom: 10px;
   width: clamp(92px, 24vw, 120px);
   aspect-ratio: 1 / 1;
   border-radius: 18px;
@@ -128,10 +145,6 @@ p {
 }
 
 .inferno-memory__hamster {
-  position: absolute;
-  left: -12px;
-  bottom: -14px;
-  width: clamp(132px, 34vw, 184px);
   margin: 0;
   padding: 0.34rem;
   border-radius: 14px;
@@ -959,19 +972,19 @@ p {
   .float-slot--inferno,
   .float-slot--call {
     display: block;
-    max-width: 260px;
+    max-width: 272px;
     margin: 0.2rem auto 0;
   }
 
   .inferno-memory__mini {
-    right: -10px;
-    bottom: 10px;
-    width: 92px;
+    right: -8px;
+    bottom: 8px;
+    width: 88px;
   }
+
   .inferno-memory__hamster {
-    position: static;
-    margin: 0.55rem auto 0;
-    width: min(82%, 210px);
+    width: 100%;
+    margin-top: 0.15rem;
   }
 
   .moment-card__sticker {
@@ -1035,6 +1048,11 @@ p {
     min-height: 180px;
     position: sticky;
     top: 1rem;
+  }
+
+  .float-slot--inferno {
+    position: static;
+    top: auto;
   }
 }
 

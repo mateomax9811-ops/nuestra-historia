@@ -15,7 +15,7 @@ const musicPanelsConfig = {
   },
   finalMusic: {
     provider: 'spotify',
-    spotifyEmbedUrl: 'https://open.spotify.com/embed/track/4Z9VQyYxP5mWQxS1hX9QyB?utm_source=generator',
+    spotifyEmbedUrl: 'https://open.spotify.com/embed/track/46haIwbQpVUkpAQj9V84Gp?utm_source=generator',
   },
 };
 
